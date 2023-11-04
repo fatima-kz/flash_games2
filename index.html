@@ -5,19 +5,37 @@
     <body>
         <!--<embed src="./Papas_Pancakeria.swf" type="application/x-shockwave-flash" width="90%" height="90%">
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>-->
-        <object data="6600b268dd81380303ff.wasm" type="application/wasm"></object>
-        <object data="a76a7110223ca05112c8.wasm" type="application/wasm"></object>
-        <input type="text" placeholder="Enter SWF file" id="swfFile">
-        <button type="button" onclick="embedFile()">Run</button>
+        <button type="button" onclick="embedFile()">Run Pancakeria</button>
+        <button type="button" onclick="embedFile2()">Run Donuteria</button>
+        <button type="button" onclick="embedFile3()">Run Cheeseria</button>
         <div id="embedding"></div>
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
         <script>
-        function embedFile() {
-        const input = document.getElementById("swfFile").value
+        function embedFile2() {
         const container = document.getElementById("embedding")
         container.innerHTML = ""
         const embed = document.createElement("embed")
-        embed.setAttribute("src", input)
+        embed.setAttribute("src", "./Papas_Pancakeria.swf")
+        embed.setAttribute("type", "application/x-shockwave-flash")
+        embed.setAttribute("width", "1200")
+        embed.setAttribute("height", "800")
+        container.appendChild(embed)
+      }
+      function embedFile3() {
+        const container = document.getElementById("embedding")
+        container.innerHTML = ""
+        const embed = document.createElement("embed")
+        embed.setAttribute("src", "./papasdonuteria")
+        embed.setAttribute("type", "application/x-shockwave-flash")
+        embed.setAttribute("width", "1200")
+        embed.setAttribute("height", "800")
+        container.appendChild(embed)
+      }
+        function embedFile() {
+        const container = document.getElementById("embedding")
+        container.innerHTML = ""
+        const embed = document.createElement("embed")
+        embed.setAttribute("src", "./papasfreezeria")
         embed.setAttribute("type", "application/x-shockwave-flash")
         embed.setAttribute("width", "1200")
         embed.setAttribute("height", "800")
